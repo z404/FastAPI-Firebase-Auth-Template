@@ -1,0 +1,17 @@
+<!-- display welcome message to logged in user -->
+<html>
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/welcome.css">
+    </head>
+    <body>
+        <h1>Welcome, {{username}}</h1>
+        <script>
+            function LogoutBtn() {
+                document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                window.location.href = "/";
+            }
+        </script>
+        <button onclick="LogoutBtn()">Logout</button>
+    </body>
+</html>
